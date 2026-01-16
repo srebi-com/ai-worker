@@ -32,14 +32,12 @@ Dummy mode (no external API calls):
 ```bash
 python worker.py --incident <INCIDENT_ID> --hint-start 3.0 --hint-end 5.0 --mode dummy
 ```
-python worker.py --incident c43adeb6-c29c-468e-bfdd-d767354b54d0 --hint-start 3.0 --hint-end 5.0 --mode dummy
 
 
 AI mode (calls OpenAI vision):
 ```bash
 python worker.py --incident <INCIDENT_ID> --hint-start 3.0 --hint-end 5.0 --mode ai
 ```
-python worker.py --incident 30da2ec7-3158-4c74-8da5-abcadf4dae6c --hint-start 3.0 --hint-end 5.0 --mode ai
 
 Options:
 - `--force` re-run even if analysis already completed
