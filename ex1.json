@@ -1,0 +1,104 @@
+{
+    "schema_version": "1.0",
+    "incident": {
+      "incident_id": "example-incident-8s",
+      "recorded_at": "2026-01-16T09:00:00Z",
+      "duration_s": 8.0
+    },
+    "robot": {
+      "id": "SRV-FOOD-01",
+      "model": "ServiceBot-F1",
+      "firmware": "2.3.1",
+      "type": "service_robot"
+    },
+    "task": {
+      "name": "food_delivery",
+      "payload": ["food_tray", "ceramic_dishes"]
+    },
+    "video": {
+      "file": "incident_8s.mp4",
+      "fps": 30,
+      "camera": "first_person"
+    },
+    "events": [
+      {
+        "ts": 0.0,
+        "level": "INFO",
+        "type": "session_start",
+        "data": {
+          "mode": "AUTO"
+        }
+      },
+      {
+        "ts": 1.2,
+        "level": "INFO",
+        "type": "motion_state",
+        "data": {
+          "velocity_mps": 0.45,
+          "state": "MOVING_FORWARD"
+        }
+      },
+      {
+        "ts": 2.7,
+        "level": "WARN",
+        "type": "stability_warning",
+        "data": {
+          "tilt_deg": 8.5,
+          "message": "Center of mass deviation detected"
+        }
+      },
+      {
+        "ts": 3.1,
+        "level": "ERROR",
+        "type": "loss_of_balance",
+        "data": {
+          "tilt_deg": 15.2,
+          "severity": 0.72
+        }
+      },
+      {
+        "ts": 4.1,
+        "level": "ERROR",
+        "type": "fall_detected",
+        "data": {
+          "direction": "forward",
+          "impact_force": 0.81
+        }
+      },
+      {
+        "ts": 4.6,
+        "level": "ERROR",
+        "type": "object_spill",
+        "data": {
+          "objects": ["ceramic_dish", "food_container"],
+          "spill_detected": true
+        }
+      },
+      {
+        "ts": 5.2,
+        "level": "INFO",
+        "type": "motion_state",
+        "data": {
+          "velocity_mps": 0.0,
+          "state": "STOPPED"
+        }
+      },
+      {
+        "ts": 6.5,
+        "level": "INFO",
+        "type": "safety_status",
+        "data": {
+          "estop": "ENGAGED",
+          "reason": "fall_detected"
+        }
+      },
+      {
+        "ts": 8.0,
+        "level": "INFO",
+        "type": "session_end",
+        "data": {
+          "reason": "incident_completed"
+        }
+      }
+    ]
+  }

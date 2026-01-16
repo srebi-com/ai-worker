@@ -1,0 +1,9 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+workdir/
+.env
+.env.local
+.env.example
+.DS_Store
